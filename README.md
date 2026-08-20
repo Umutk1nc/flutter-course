@@ -22,3 +22,4 @@ Before starting Flutter, I completed a Dart programming course covering fundamen
 ## Progress
 
 - [x] Lesson 1 - Flutter Setup & Flutter Basics
+- [x] Lesson 2 - Container, Row, Column & BoxConstraints
