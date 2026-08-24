@@ -23,3 +23,4 @@ Before starting Flutter, I completed a Dart programming course covering fundamen
 
 - [x] Lesson 1 - Flutter Setup & Flutter Basics
 - [x] Lesson 2 - Container, Row, Column
+- [x] Lesson 3 - Expanded and Flexible Widgets
