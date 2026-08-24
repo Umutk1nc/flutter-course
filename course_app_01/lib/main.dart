@@ -7,28 +7,38 @@ class TestApp extends StatelessWidget{
   const TestApp({super.key});
   @override
   Widget build(BuildContext context) {
-    var container = Container(//Container Widget
-          height:200,
-          margin:EdgeInsets.symmetric(horizontal: 10,vertical:10),//margin:EdgeInsets.only(left: 50,top: 50),
-          color: Colors.red,
-          child: Row(//Row Widget
-            mainAxisAlignment: MainAxisAlignment.spaceAround,//It takes the available space and distributes it evenly between the children
-            crossAxisAlignment: CrossAxisAlignment.stretch,//It takes the available space and stretches the children to fill the available space
-            children: [
-              myContainer(),
-              myContainer()
-          ],)
-        );
     return MaterialApp(
       home:Scaffold(
         appBar: AppBar(
           backgroundColor:Colors.blueAccent,
           title:const Text("Test App"),//Title of the AppBar
         ),  
-        body:Column(//Column Widget
+        body:Row(
           children: [
-            container,
-            container,
+            Expanded(//Expanded widget is used to make the child Container take up the available space in the Row
+            flex:2,//flex property is used to specify the proportion of space that the child Container should take up in the Row
+              child: Container(
+                width: 50,
+                height: 150,
+                color:Colors.amberAccent,
+              ),
+            ),
+            Flexible(//Flexible widget is used to make the child Container take up the available space in the Row
+            fit:FlexFit.tight,//fit property is used to specify how the child Container should fit within the Flexible space
+              child: Container(
+                width: 100,
+                height: 150,
+                color:Colors.deepOrange,
+              ),
+            ),
+            Expanded(
+              flex:2,
+              child: Container(
+                width: 150,
+                height: 150,
+                color:Colors.deepPurple,
+              ),
+            ),
           ],
         ),
 
