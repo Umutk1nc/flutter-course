@@ -25,3 +25,4 @@ Before starting Flutter, I completed a Dart programming course covering fundamen
 - [x] Lesson 2 - Container, Row, Column
 - [x] Lesson 3 - Expanded and Flexible Widgets
 - [x] Lesson 4 - Profile Page UI Application
+- [x] Lesson 5 - StatefulWidget and setState
