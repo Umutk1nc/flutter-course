@@ -1,3 +1,4 @@
+import 'package:course_app_03/button_types.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
@@ -10,17 +11,29 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner:false,//to remove debug banner
-      theme:ThemeData(
-        primarySwatch: Colors.blue,
-        useMaterial3: false,//to use material 3 design
+      debugShowCheckedModeBanner: false, //to remove debug banner
+      theme: ThemeData(
+        
+        textTheme: TextTheme(
+          labelLarge: TextStyle(
+            //more text theme can be added here
+            fontSize: 20,
+          ),
+        ),
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          //more floating action button theme can be added here
+          backgroundColor: Colors.blue,
+        ),
+        primarySwatch: Colors.deepPurple,
+        useMaterial3: false, //to use material 3 design
       ),
-      home:HomePage(),
+      home: ButtonTypes(), //Button Types() or HomePage() can be used here to show the respective page
     );
   }
 }
 
-class HomePage extends StatefulWidget {//stateful widget is used when the state of the widget changes over time
+class HomePage extends StatefulWidget {
+  //stateful widget is used when the state of the widget changes over time
   const HomePage({super.key});
 
   @override
@@ -28,27 +41,31 @@ class HomePage extends StatefulWidget {//stateful widget is used when the state 
 }
 
 class _HomePageState extends State<HomePage> {
-  var _counter=0;
+  var _counter = 0;
 
   // ignore: non_constant_identifier_names
-  void _IncreaseCounter(){
-    setState(() {//setState is used to update the state of the widget  
-    _counter++;
+  void _IncreaseCounter() {
+    setState(() {
+      //setState is used to update the state of the widget
+      _counter++;
     });
     debugPrint("Counter:$_counter");
   }
 
   // ignore: non_constant_identifier_names
-  void _DecreaseCounter(){
-    setState(() {//setState is used to update the state of the widget  
-    _counter--;
+  void _DecreaseCounter() {
+    setState(() {
+      //setState is used to update the state of the widget
+      _counter--;
     });
     debugPrint("Counter:$_counter");
   }
+
   // ignore: non_constant_identifier_names
-  void _ResetCounter(){
-    setState(() {//setState is used to update the state of the widget  
-    _counter=0;
+  void _ResetCounter() {
+    setState(() {
+      //setState is used to update the state of the widget
+      _counter = 0;
     });
 
     debugPrint("Counter:0");
@@ -57,20 +74,22 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:Text("Learning Application")
-      ),
-      body:Center(
+      appBar: AppBar(title: Text("Learning Application")),
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Amount",
-            style:Theme.of(context).textTheme.bodyLarge),
-            Text(_counter.toString(),
-            style:Theme.of(context).textTheme
-            .displayMedium
-            ?.copyWith(color:_counter<0?Colors.red:_counter==0?Colors.blue:Colors.green),
+            Text("Amount", style: Theme.of(context).textTheme.labelLarge),
+            Text(
+              _counter.toString(),
+              style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                color: _counter < 0
+                    ? Colors.red
+                    : _counter == 0
+                    ? Colors.blue
+                    : Colors.green,
+              ),
             ),
-
           ],
         ),
       ),
@@ -78,7 +97,7 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-            onPressed:(){
+            onPressed: () {
               _IncreaseCounter();
             },
             backgroundColor: Colors.green,
@@ -86,7 +105,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 4),
           FloatingActionButton(
-            onPressed:(){
+            onPressed: () {
               _DecreaseCounter();
             },
             backgroundColor: Colors.red,
@@ -94,7 +113,7 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 4),
           FloatingActionButton(
-            onPressed:(){
+            onPressed: () {
               _ResetCounter();
             },
             child: Icon(Icons.refresh),
