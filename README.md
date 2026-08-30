@@ -27,3 +27,4 @@ Before starting Flutter, I completed a Dart programming course covering fundamen
 - [x] Lesson 4 - Profile Page UI Application
 - [x] Lesson 5 - StatefulWidget and setState
 - [x] Lesson 6 - Button Types
+- [x] Lesson 7 - Image Widgets
