@@ -1,5 +1,7 @@
 // ignore: unused_import
 import 'package:course_app_03/button_types.dart';
+import 'package:course_app_03/color_picker.dart';
+// ignore: unused_import
 import 'package:course_app_03/dropdown_popup.dart';
 // ignore: unused_import
 import 'package:course_app_03/image_widgets.dart';
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         useMaterial3: false, //to use material 3 design
       ),
-      home: const DropdownPopup(), //Button Types(), HomePage(), ImageWidgets(), can be used here to show the respective page
+      home: const ColorPickerPage(), //Button Types(), HomePage(), ImageWidgets(), DropdownPopup() can be used here to show the respective page
     );
   }
 }
