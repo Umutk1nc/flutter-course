@@ -7,6 +7,8 @@ class OneRowListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(//Column widget is used to arrange its children vertically.
+        shrinkWrap: true,//shrinkWrap property is set to true to make the ListView take only the space it needs.
+        physics: NeverScrollableScrollPhysics(),//physics property is set to NeverScrollableScrollPhysics to disable scrolling of the ListView.
         children: [
           ListTile(
             leading: CircleAvatar(
