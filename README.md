@@ -31,3 +31,4 @@ Before starting Flutter, I completed a Dart programming course covering fundamen
 - [x] Lesson 8 - Dropdown and PopUp Widgets
 - [x] Lesson 9 - Color Picker Application
 - [x] Lesson 10 - ListView, Card and ListTile
+- [x] Lesson 11 - SmartDialog and GestureDetector
