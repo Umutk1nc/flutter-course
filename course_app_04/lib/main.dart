@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:course_app_04/card_listtile.dart';
+import 'package:course_app_04/grid_view.dart';
 // ignore: unused_import
 import 'package:course_app_04/list_view.dart';
 // ignore: unused_import
@@ -29,7 +30,8 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('List and Data Processes'),
         ),
-        body: OneRowListView(), // 50 student list with GestureDetector and SmartDialog on tap
+        body:GridViewTypes(),//GridViewTypes() for gridview with 100 students
+        //body: OneRowListView(), // 50 student list with GestureDetector and SmartDialog on tap
         //body: OneRowListView().listView(), // scrollable ListView with OneRowListTile repeated twice
         //body: OneRowListView().singleChildScrollView(), // SingleChildScrollView with one OneRowListTile
         //body: CardListTile(), // OneRowListTile constrained inside a Card via Expanded, no scrolling
