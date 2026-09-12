@@ -70,4 +70,10 @@ class Student{
   final bool isBoy;
 
   Student({required this.id, required this.name, required this.isBoy});
+
+
+  @override
+  String toString(){
+    return name;
+  }
 }
